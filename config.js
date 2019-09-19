@@ -1,6 +1,6 @@
 module.exports = {
   mongodb: {
-    uri: 'mongodb://localhost/any-shop-test',
+    uri: process.env.MONGODB_URL || 'mongodb://localhost/any-shop-test',
   },
   crypto: {
     iterations: (process.env.NODE_ENV === 'test' ? 1 : 12000),
