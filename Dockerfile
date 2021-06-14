@@ -1,9 +1,9 @@
-FROM node:14-alpine as dependencies
+FROM node:16.3.0-alpine as dependencies
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --production
 
-FROM node:14-alpine
+FROM node:16.3.0-alpine
 WORKDIR /app
 RUN adduser -D noroot && chown -R noroot /app
 USER noroot

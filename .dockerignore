@@ -1,8 +1,5 @@
 node_modules
 
-fixtures
-data
-
 **/*.spec.ts
 
 Dockerfile
